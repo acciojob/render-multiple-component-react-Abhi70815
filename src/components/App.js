@@ -8,16 +8,17 @@ const App = () => {
     {name:"youtube", description:"deveploped in 1999"}
   ]
   return (
-    <div id="main">
+    <div id="main" className="ns-wrapper">
       {
-        project.map((elem,index)=>{
-         <div className="ns-wrapper">
+        project.map((elem,index)=>(
+         <div  key={index}>
+          {console.log(elem)}
 
 <h1 data-ns-test="project-name">{elem.name}</h1>
 <h6 data-ns-test="project-description">{elem.description}</h6>
 
          </div>
-        })
+        ))
       }
     </div>
 
